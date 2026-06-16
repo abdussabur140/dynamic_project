@@ -43,3 +43,96 @@ document.addEventListener("click", (e) => {
         isOpen = false;
     }
 });
+
+
+
+
+
+// For app bar backgoround color changes dynamically within the appilix app.
+
+appilix.postMessage(JSON.stringify({
+    type: "update_settings",
+    updates: {
+        modules: {
+            app_bar: {
+                settings: {
+                    bg_color: {
+                        light: "#186E62",
+                        dark: "#186E62"
+                    },
+                    title_color: {
+                        light: "#ffffff",
+                        dark: "#ffffff"
+                    },
+                    default_title: "Mathlify Academy"
+                }
+            }
+        }
+    }
+}));
+
+
+
+appilix.postMessage(JSON.stringify({
+    type: "update_settings",
+    updates: {
+        modules: {
+            app_bar: {
+                settings: {
+                    bg_color: {
+                        light: "#ee4b2b",
+                        dark: "#ee4b2b"
+                    },
+                    title_color: {
+                        light: "#ffffff",
+                        dark: "#ffffff"
+                    },
+                    default_title: "About"
+                }
+            }
+        }
+    }
+}));
+
+
+appilix.postMessage(JSON.stringify({
+    type: "update_settings",
+    updates: {
+        modules: {
+            app_bar: {
+                settings: {
+                    bg_color: {
+                        light: "#000000",
+                        dark: "#000000"
+                    },
+                    title_color: {
+                        light: "#ffffff",
+                        dark: "#ffffff"
+                    },
+                    default_title: "Services"
+                }
+            }
+        }
+    }
+}));
+
+appilix.postMessage(JSON.stringify({
+    type: "update_settings",
+    updates: {
+        modules: {
+            app_bar: {
+                settings: {
+                    bg_color: {
+                        light: "#0000ff",
+                        dark: "#0000ff"
+                    },
+                    title_color: {
+                        light: "#ffffff",
+                        dark: "#ffffff"
+                    },
+                    default_title: "Contact"
+                }
+            }
+        }
+    }
+}));
