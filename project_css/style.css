@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #e6dbdb;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar .logo a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar .logo a:visited{
+    color: black;
+}
+
+
+.navbar .nav_items_full_screen{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    
+}
+
+.navbar .nav_items_full_screen a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.navbar .nav_items_full_screen a:hover{
+
+    color: rgb(113, 92, 92);
+}
+
+.navbar .nav_items_full_screen .active{
+    color: rgb(113, 92, 92, 0.9);
+}
+
+.navbar .mobile_screen{
+    display: none;
+}
+
+
+
+/* For Mobile Screen */
+@media screen and (max-width: 768px){
+.navbar .mobile_screen{
+    display: block;
+} 
+
+.mobile_view_nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #e6dbdb;
+    transition: all 1s ease;
+}
+
+.mobile_view_nav_items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    background-color: #e6dbdb;
+}
+
+
+.mobile_view_nav .mobile_view_nav_items a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+
+.mobile_view_nav_items a:hover{
+
+    color: rgb(113, 92, 92);
+}
+
+.mobile_view_nav_items .active{
+    color: rgb(113, 92, 92, 0.9);
+}
+
+
+
+
+
+
+
+.mobile_view_nav.active {
+    display: block;
+}
+
+.navbar .nav_items_full_screen{
+    display: none;
+}
+
+.navbar{
+    padding: 15px 20px;
+}
+
+.navbar .mobile_screen img{
+    width: 30px;
+}
+
+}
+
+
+
+
+/* For Home container */
+.container {
+    max-width: 1220px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
