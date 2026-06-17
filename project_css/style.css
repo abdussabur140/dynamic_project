@@ -122,6 +122,7 @@
 
 .navbar .mobile_screen img{
     width: 30px;
+    cursor: pointer;
 }
 
 }
