@@ -55,19 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const appBarConfig = {
         "index.html": {
-            bg: "#186E62",
+            bg: "#00ff00",
             title: "Mathlify Academy"
         },
         "about.html": {
-            bg: "#ee4b2b",
+            bg: "#ff0000",
             title: "About"
         },
         "services.html": {
-            bg: "#000000",
+            bg: "#0000ff",
             title: "Services"
         },
         "contact.html": {
-            bg: "#0000ff",
+            bg: "#000000",
             title: "Contact"
         }
     };
