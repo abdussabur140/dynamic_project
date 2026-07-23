@@ -97,3 +97,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }));
     }
 });
+
+
+
+// Vibration Function
+
+function appilixVibrationPattern() {
+    if (typeof appilix === "undefined") {
+        console.warn("Appilix JS Bridge is not available.");
+        return;
+    }
+
+    appilix.postMessage(JSON.stringify({
+        type: "vibration_init",
+        props: {
+            pattern: [200, 100, 200, 100, 500]
+        }
+    }));
+}
