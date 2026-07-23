@@ -109,7 +109,7 @@ function appilixVibrationPattern() {
     }
 
     appilix.postMessage(JSON.stringify({
-        type: "vibration_init",
+        type: "vibrate",
         props: {
             pattern: [200, 100, 200, 100, 500]
         }
