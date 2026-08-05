@@ -3,49 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotion</title>
+    <title>Promotional Page</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
-            width: 100%;
-            height: 100vh;
-            background: #ffffff;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eef5ff, #ffffff);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: Arial, sans-serif;
+            padding: 20px;
         }
 
-        .promo-container {
+        .promo-wrapper {
+            width: 100%;
+            max-width: 450px;
+            background: white;
+            border-radius: 20px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
             text-align: center;
-            display: none; /* Keep blank page initially */
         }
 
-        .promo-container h1 {
-            font-size: 32px;
+        .logo {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0066ff, #00bfff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 30px;
             color: #222;
+            margin-bottom: 15px;
         }
 
-        .promo-container p {
-            margin-top: 10px;
+        .subtitle {
             color: #666;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
         }
+
+        .feature-box {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
+            padding: 12px;
+            border-radius: 12px;
+            background: #f8faff;
+        }
+
+        .icon {
+            min-width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #0066ff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .description {
+            margin-top: 25px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 35px;
+            border-radius: 30px;
+            background: #0066ff;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #004ecc;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #999;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <!-- Add your promotional content here later -->
-    <div class="promo-container">
-        <h1>Special Offer</h1>
-        <p>Welcome to our promotion page.</p>
+<div class="promo-wrapper">
+
+    <div class="logo">
+        A
     </div>
+
+    <h1>
+        Welcome to Our App
+    </h1>
+
+    <p class="subtitle">
+        Experience a faster, smarter, and more convenient way to access
+        all your favorite services from one place.
+    </p>
+
+
+    <div class="feature-box">
+
+        <div class="feature">
+            <div class="icon">✓</div>
+            <div>
+                <h3>Fast & Easy Access</h3>
+                <p>
+                    Enjoy quick access to all features with a smooth and
+                    user-friendly mobile experience.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="feature">
+            <div class="icon">⚡</div>
+            <div>
+                <h3>Better Performance</h3>
+                <p>
+                    Our optimized platform provides improved speed,
+                    reliability, and a seamless experience.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="feature">
+            <div class="icon">🔒</div>
+            <div>
+                <h3>Secure Experience</h3>
+                <p>
+                    Your privacy and security are our priority with
+                    modern protection technology.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="feature">
+            <div class="icon">⭐</div>
+            <div>
+                <h3>Exclusive Features</h3>
+                <p>
+                    Get access to premium features designed to make
+                    your daily tasks easier.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <p class="description">
+        Thank you for choosing our application. We continuously work to
+        improve our services and bring you new updates, better features,
+        and a more enjoyable experience.
+    </p>
+
+
+    <a href="#" class="button">
+        Get Started
+    </a>
+
+
+    <div class="footer">
+        © 2026 All Rights Reserved
+    </div>
+
+</div>
+
 
 </body>
 </html>
