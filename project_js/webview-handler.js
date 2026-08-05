@@ -1,17 +1,14 @@
 <script>
-const MobilePageHandler = {
-  init() {
-    if (this.isMobile()) {
-      setTimeout(() => {
-        window.location.href = "webview-exclusive.html";
-      }, 5000);
-    }
-  },
+document.addEventListener("DOMContentLoaded", function () {
 
-  isMobile() {
-    return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  // Check mobile device
+  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    setTimeout(function () {
+      window.location.replace("webview-exclusive.html");
+    }, 5000);
   }
-};
 
-MobilePageHandler.init();
+});
 </script>
