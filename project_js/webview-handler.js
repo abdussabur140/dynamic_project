@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (isMobile) {
     setTimeout(function () {
-      window.location.replace("https://abdussabur140.github.io/webview-exclusive.html");
+      window.location.replace("https://abdussabur140.github.io/dynamic_project/webview-exclusive.html");
     }, 5000);
   }
 
