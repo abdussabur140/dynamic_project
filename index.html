@@ -47,12 +47,19 @@
 
     <script src="project_js/script.js"></script>
 
-    <script>
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-        window.open("promotional.html", "_blank");
-    }, 5000); // 5000ms = 5 seconds
-  });
+<script>
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            let newWindow = window.open(
+                "promotional.html",
+                "_blank"
+            );
+    
+            if (!newWindow) {
+                console.log("Popup blocked by WebView");
+            }
+        }, 5000);
+    });
 </script>
 </body>
 </html>
