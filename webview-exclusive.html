@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="applix-webview" content="true">
+    <title>Exclusive App Content</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            animation: slideUp 0.6s ease-out;
+            max-width: 500px;
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .features li {
+            list-style: none;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .features li:before {
+            content: "✓";
+            margin-right: 12px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .btn-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .icon {
+            animation: pulse 2s infinite;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 26px;
+            }
+            .icon {
+                font-size: 60px;
+                margin-bottom: 20px;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            .btn {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="icon">📱</span>
+        <div class="badge">App Only</div>
+        <h1>Welcome to the App</h1>
+        <p class="subtitle">Exclusive features available only in our mobile app</p>
+        
+        <p>You've unlocked special content that's only available to app users. Enjoy these premium features!</p>
+
+        <ul class="features">
+            <li>🚀 Faster performance</li>
+            <li>🔔 Push notifications</li>
+            <li>📊 Advanced analytics</li>
+            <li>💾 Offline access</li>
+        </ul>
+
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="continueToSite()">Continue to Site</button>
+            <button class="btn btn-secondary" onclick="shareAppLink()">Share App</button>
+        </div>
+
+        <footer>
+            <p>This page only appears in the mobile app</p>
+        </footer>
+    </div>
+
+    <script>
+        // Log that this page was loaded
+        console.log('WebView exclusive page loaded');
+
+        // Detect if running in webview
+        function isWebView() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            return (typeof window.applix !== 'undefined' || 
+                    userAgent.includes('ApplixWebView') || 
+                    userAgent.includes('wv'));
+        }
+
+        // Redirect if NOT in webview
+        if (!isWebView()) {
+            window.location.href = 'index.html';
+        }
+
+        function continueToSite() {
+            // Pass a flag to prevent showing this again immediately
+            sessionStorage.setItem('webviewPageShown', 'true');
+            window.location.href = 'index.html';
+        }
+
+        function shareAppLink() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Check out our App',
+                    text: 'Download our app for exclusive features!',
+                    url: window.location.href
+                });
+            } else {
+                alert('Get our app for exclusive features and better performance!');
+            }
+        }
+    </script>
+</body>
+</html>
